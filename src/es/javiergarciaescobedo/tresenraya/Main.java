@@ -5,6 +5,7 @@
  */
 package es.javiergarciaescobedo.tresenraya;
 
+import es.javiergarciaescobedo.tresenraya.model.TresEnRaya;
 import es.javiergarciaescobedo.tresenraya.view.Tablero;
 import javafx.application.Application;
 import javafx.scene.Scene;
