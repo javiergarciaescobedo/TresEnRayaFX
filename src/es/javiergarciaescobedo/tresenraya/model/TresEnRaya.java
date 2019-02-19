@@ -2,7 +2,8 @@
 package es.javiergarciaescobedo.tresenraya.model;
 
 public class TresEnRaya {
-    int[][] matrizTablero = new int[3][3];
+    
+    public char[][] matrizTablero = new char[3][3];
     
     public void mostrarTablero() {
         for(int y=0; y<3; y++) {
@@ -13,7 +14,7 @@ public class TresEnRaya {
         }       
     }
     
-    public void ponerFicha(int x, int y, int jugador) {
+    public void ponerFicha(int x, int y, char jugador) {
         matrizTablero[x][y] = jugador;
     }    
     
