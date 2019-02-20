@@ -32,6 +32,9 @@ public class Main extends Application {
         for(int y=0; y<3; y++) {
             for(int x=0; x<3; x++) {
                 switch(tresEnRaya.matrizTablero[x][y]) {
+                    case '0':
+                        tableroView.rellenarCasilla(x, y);
+                        break;
                     case '1':
                         tableroView.ponerFicha(x, y, '1');
                         break;
