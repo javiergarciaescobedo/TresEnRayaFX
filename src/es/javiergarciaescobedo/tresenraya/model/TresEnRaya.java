@@ -24,6 +24,14 @@ public class TresEnRaya {
     
     public void ponerFicha(int x, int y, char jugador) {
         matrizTablero[x][y] = jugador;
-    }    
+    } 
+    
+    public boolean estaLibreCelda(int x, int y) {
+        if(matrizTablero[x][y] == '0') {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
 }
