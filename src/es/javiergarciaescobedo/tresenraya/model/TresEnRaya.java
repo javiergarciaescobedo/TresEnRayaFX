@@ -25,7 +25,20 @@ public class TresEnRaya {
     public void ponerFicha(int x, int y, char jugador) {
         matrizTablero[x][y] = jugador;
     } 
-    
+            
+    public void moverFicha(int xOrigen, int yOrigen, int xDestino, int yDestino) {
+//        char jugador = matrizTablero[xOrigen][yOrigen];
+//        matrizTablero[xDestino][yDestino] = jugador;   
+        try {
+            matrizTablero[xDestino][yDestino] = matrizTablero[xOrigen][yOrigen];
+            matrizTablero[xOrigen][yOrigen] = '0';
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("ERROR: No existe la posición indicada");
+        } catch(Exception e) {
+            System.out.println("ERROR desconocido");
+        }
+    }
+        
     public boolean estaLibreCelda(int x, int y) {
         if(matrizTablero[x][y] == '0') {
             return true;
