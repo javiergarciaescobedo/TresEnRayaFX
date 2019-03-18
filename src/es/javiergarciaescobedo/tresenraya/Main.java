@@ -8,8 +8,10 @@ package es.javiergarciaescobedo.tresenraya;
 import es.javiergarciaescobedo.tresenraya.model.TresEnRaya;
 import es.javiergarciaescobedo.tresenraya.view.TableroView;
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -21,33 +23,17 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         
-        TableroView tableroView = new TableroView();
+        TableroView tableroView = new TableroView();        
         
-        TresEnRaya tresEnRaya = new TresEnRaya();
-        tresEnRaya.ponerFicha(0, 0, '2');
-        tresEnRaya.ponerFicha(1, 2, '1');
-        tresEnRaya.ponerFicha(0, 1, '2');
-        tresEnRaya.ponerFicha(2, 2, '1');
+        // Contenedor para alinear el tablero en centro horizontalmente
+        HBox hBox = new HBox(tableroView.getGridTablero());
+        hBox.setAlignment(Pos.CENTER);
         
-        tableroView.mostrarFondoTablero();
-        
-        for(int y=0; y<3; y++) {
-            for(int x=0; x<3; x++) {
-                switch(tresEnRaya.matrizTablero[x][y]) {                    
-                    case '1':
-                        tableroView.ponerFicha(x, y, '1');
-                        break;
-                    case '2':
-                        tableroView.ponerFicha(x, y, '2');
-                        break;
-                }
-            }            
-        }  
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(tableroView.getGridTablero());
-         
-        Scene scene = new Scene(root, 300, 250);
+        // Contenedor principal será de tipo VBox para centrar tablero verticalmente
+        VBox root = new VBox();
+        root.getChildren().add(hBox);
+        root.setAlignment(Pos.CENTER);
+        Scene scene = new Scene(root, 250, 250);
         
         primaryStage.setTitle("Tres en raya");
         primaryStage.setScene(scene);
