@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package es.javiergarciaescobedo.tresenraya;
+package es.javiergarciaescobedo.tresenrayafxmaven;
 
-import es.javiergarciaescobedo.tresenraya.model.TresEnRaya;
-import es.javiergarciaescobedo.tresenraya.view.TableroView;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

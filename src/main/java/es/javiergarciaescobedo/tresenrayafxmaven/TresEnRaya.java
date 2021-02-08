@@ -1,5 +1,5 @@
 
-package es.javiergarciaescobedo.tresenraya.model;
+package es.javiergarciaescobedo.tresenrayafxmaven;
 
 public class TresEnRaya {
     

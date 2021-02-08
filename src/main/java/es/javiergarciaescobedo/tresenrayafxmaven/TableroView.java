@@ -1,7 +1,6 @@
 
-package es.javiergarciaescobedo.tresenraya.view;
+package es.javiergarciaescobedo.tresenrayafxmaven;
 
-import es.javiergarciaescobedo.tresenraya.model.TresEnRaya;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
